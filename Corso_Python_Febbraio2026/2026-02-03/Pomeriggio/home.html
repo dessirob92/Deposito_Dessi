@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETERNA | The Quantum Legacy</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#050505',
+                        titanium: '#a8a9ad',
+                        gold: '#d4af37',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { cursor: none; background-color: #050505; }
+        .cursor { pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .watch-card { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .watch-card:hover { transform: translateY(-20px); }
+        ::-webkit-scrollbar { display: none; }
+        
+        /* Effetto overlay sulle immagini per renderle più "dark luxury" */
+        .img-overlay { position: relative; }
+        .img-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.8));
+        }
+    
+    
+            /* Stili aggiunti per la sezione contatti */
+        .contact-input {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+        .contact-input:focus {
+            border-bottom: 1px solid #d4af37;
+        }
+        .contact-input::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 9px;
+            letter-spacing: 2px;
+        }
+        .contact-label {
+            position: absolute;
+            left: 0;
+            top: -12px;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #d4af37;
+            opacity: 0;
+            transition: 0.4s ease;
+        }
+        .contact-input:focus + .contact-label {
+            opacity: 1;
+            top: -18px;
+        }
+    
+    
+    
+    </style>
+</head>
+<body class="text-titanium antialiased overflow-x-hidden">
+
+    <div id="cursor" class="cursor fixed w-4 h-4 bg-gold rounded-full transition-transform duration-75"></div>
+
+    <nav class="fixed top-0 w-full z-50 px-8 py-6 flex justify-between items-center glass">
+        <div class="logo font-serif text-2xl tracking-[0.4em] text-white">AETERNA</div>
+        <div class="hidden md:flex space-x-12 font-mono text-[10px] tracking-widest uppercase">
+            <a href="#collection" class="hover:text-gold transition-colors">Collection</a>
+            <a href="#tech" class="hover:text-gold transition-colors">Engineering</a>
+            <a href="#" class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-black transition-all">Pre-Order</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
+        <div class="z-20 text-center mb-10">
+            <h1 id="hero-title" class="font-serif text-6xl md:text-9xl text-white italic leading-tight">AETERNA</h1>
+            <p class="font-mono text-xs tracking-[0.8em] uppercase opacity-50">The New Swiss-Digital Standard</p>
+        </div>
+        
+        <div id="watch-main" class="relative z-10 w-full max-w-4xl px-4 flex justify-center">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800" 
+                 alt="Aeterna Watch" 
+                 class="w-full max-w-sm object-contain drop-shadow-[0_35px_35px_rgba(212,175,55,0.3)] brightness-110">
+        </div>
+
+        <div class="absolute bottom-10 animate-bounce opacity-30 font-mono text-[8px] tracking-widest">SCROLL TO DISCOVER</div>
+    </section>
+
+    <section id="collection" class="py-32 px-10 bg-obsidian">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-24 flex flex-col md:flex-row justify-between items-end gap-6">
+                <h2 class="font-serif text-5xl md:text-7xl text-white italic leading-none">La Collezione.</h2>
+                <p class="font-mono text-xs max-w-xs opacity-50 uppercase tracking-tighter">Tre iterazioni di perfezione. Titanio, Oro e Carbonio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="watch-card space-y-6 group">
+                    <div class="img-overlay overflow-hidden glass p-4 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=600" 
+                             alt="Model Black" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h3 class="font-serif text-2xl text-white">Phantom</h3>
+                            <p class="font-mono text-[10px] uppercase text-gold">DLC Black Steel</p>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">€12.500</span>
+                    </div>
+                </div>
+
+                <div class="watch-card space-y-6 md:translate-y-24 group">
+                    <div class="img-overlay overflow-hidden glass p-4 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=600" 
+                             alt="Model Gold" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h3 class="font-serif text-2xl text-white">Quantum</h3>
+                            <p class="font-mono text-[10px] uppercase text-gold">18K Rose Gold</p>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">€18.900</span>
+                    </div>
+                </div>
+
+                <div class="watch-card space-y-6 group">
+                    <div class="img-overlay overflow-hidden glass p-4 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=80&w=600" 
+                             alt="Model Titanium" class="w-full h-full object-cover group-hover:rotate-2 transition-transform duration-700">
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <h3 class="font-serif text-2xl text-white">Apex</h3>
+                            <p class="font-mono text-[10px] uppercase text-gold">Grade 5 Titanium</p>
+                        </div>
+                        <span class="font-mono text-sm tracking-tighter">€11.200</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-40 px-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
+        <div class="md:w-1/2">
+            <img src="https://images.unsplash.com/photo-1612810806563-4cb8265db55f?auto=format&fit=crop&q=80&w=800" 
+                 alt="Macro Movement" class="rounded-lg opacity-80 filter brightness-75 hover:brightness-100 transition-all">
+        </div>
+        <div class="md:w-1/2 space-y-8">
+            <h2 class="font-serif text-5xl text-white leading-tight italic">Meccanica <br>Aumentata.</h2>
+            <p class="opacity-60 leading-relaxed text-lg">Non abbiamo rimosso gli ingranaggi, li abbiamo resi senzienti. Ogni movimento Aeterna è testato per 600 ore in condizioni estreme.</p>
+            <div class="h-px w-full bg-gold/30"></div>
+            <button class="font-mono text-[10px] tracking-[0.5em] text-gold uppercase">Vedi le specifiche tecniche -></button>
+        </div>
+    </section>
+
+    <section id="concierge" class="py-32 px-10 bg-black relative overflow-hidden border-t border-white/5">
+        <div class="max-w-4xl mx-auto glass p-10 md:p-20 relative z-10">
+            <div class="text-center mb-16">
+                <span class="font-mono text-gold text-[10px] tracking-[0.6em] uppercase">Private Access</span>
+                <h2 class="font-serif text-5xl md:text-6xl text-white italic mt-6">Concierge.</h2>
+                <p class="mt-6 text-titanium/50 font-light max-w-md mx-auto leading-relaxed">
+                    Accesso riservato su invito. Inserisca i suoi dati per richiedere una consulenza privata o entrare in lista d'attesa.
+                </p>
+            </div>
+
+            <form class="space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="relative">
+                        <input type="text" id="name" class="contact-input w-full py-3 text-white focus:outline-none bg-transparent" placeholder="NOME COMPLETO">
+                        <label for="name" class="contact-label">Nome Completo</label>
+                    </div>
+                    <div class="relative">
+                        <input type="email" id="email" class="contact-input w-full py-3 text-white focus:outline-none bg-transparent" placeholder="EMAIL">
+                        <label for="email" class="contact-label">Email</label>
+                    </div>
+                </div>
+                <div class="relative">
+                    <textarea id="message" rows="1" class="contact-input w-full py-3 text-white focus:outline-none bg-transparent resize-none" placeholder="NOTE PARTICOLARI"></textarea>
+                    <label for="message" class="contact-label">Messaggio</label>
+                </div>
+                <div class="flex justify-center pt-8">
+                    <button type="button" class="group relative px-16 py-4 border border-gold/40 overflow-hidden">
+                        <span class="relative z-10 font-mono text-[10px] tracking-widest text-gold group-hover:text-black transition-colors duration-500 uppercase">
+                            Invia Richiesta
+                        </span>
+                        <div class="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <footer class="py-20 border-t border-white/5 text-center">
+        <p class="font-mono text-[10px] tracking-[0.4em] opacity-40 uppercase">Aeterna Genève &copy; 2026 • Crafted in Silicon Valley, Born in Swiss</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const cursor = document.getElementById('cursor');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, { x: e.clientX - 8, y: e.clientY - 8, duration: 0.1 });
+        });
+
+        // Hero Entrance
+        gsap.from("#hero-title", { y: 100, opacity: 0, duration: 2, ease: "expo.out" });
+        gsap.from("#watch-main img", { scale: 0.8, opacity: 0, duration: 2.5, ease: "expo.out", delay: 0.3 });
+
+        // Scroll animations per le card
+        gsap.utils.toArray('.watch-card').forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%"
+                },
+                y: 100,
+                opacity: 0,
+                duration: 1.5,
+                ease: "power4.out",
+                delay: i * 0.2
+            });
+        });
+
+        // Hover effect for cursor
+        document.querySelectorAll('a, button, .watch-card').forEach(el => {
+            el.addEventListener('mouseenter', () => gsap.to(cursor, { scale: 4, opacity: 0.5 }));
+            el.addEventListener('mouseleave', () => gsap.to(cursor, { scale: 1, opacity: 1 }));
+        });
+    </script>
+</body>
+</html>
