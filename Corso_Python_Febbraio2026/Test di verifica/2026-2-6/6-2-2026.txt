@@ -1,0 +1,45 @@
+Domanda 2 --> Incapsulamento, Polimorfismo, Ereditarietà
+Domanda 3 --> Insieme di variabili salvato in un determinato punto della memoria.
+                Le caratteristiche che definiscono una collezione sono 3:
+                - Sono modificabili
+                - Sono ordinabili
+                - Sono eterogenee
+                Esempi:
+                - Liste --> modificabili, definite da []
+                - Tuple --> non modificabili eccetto quando vengono inizializzate, definite da () in caso di packing o senza alcuna parentesi in caso di unpacking
+                - Insiemi --> non ordinati e senza duplicati, definiti da set()
+Domanda 4 --> Stringhe
+Domanda 5 --> Python è un linguaggio di programmazione:
+                - OOP (Object Oriented Programmed) --> Rispetta le regole di Incapsulamento, Polimorfismo ed Ereditarietà, 3 regole possibili grazie al concetto di Astrazione
+                - Alto livello --> Python è pensato per il programmatore: ha un linguaggio più vicino a quello umano che a quello della macchina. La macchina, per poter comprendere il linguaggio, deve necessariamente interpretarlo
+                - Interpretato --> Un interprete analizza il codice sorgente. Se è corretto, lo esegue
+                - (fortemente) Dinamico --> Può cambiare dinamicamente i tipi delle variabili, ma le variabili devono avere obbligatoriamente un tipo per essere definite correttamente
+Domanda 6 --> Una funzione che non ha richiami
+Domanda 7 --> Una variabile è un contenitore per valori. Viene definita da 3 elementi:
+                - Nome
+                - Valore
+                - Tipo (int, float, string, boolean...)
+Domanda 8 --> Una funzione senza return (???)
+Domanda 9 --> Una funzione è un blocco di codice autonomo che esegue una determinata operazione. è la prova pratica dell'Astrazione.
+                Esempi:
+                def() --> Definisce una funzione
+                return --> restituisce un risultato
+Domanda 10 --> Una tecnologia di versionamento (???)
+Domanda 11 --> Structured Query Language, è un sistema di raccolta di dati definiti da un campo univoco
+Domanda 12 --> Un'interrogazione al DB
+Domanda 13 --> Un operatore è un metodo che definisce un'operazione aritmetica o logica
+                - Aritmetica --> richiama le operazioni aritmetiche (+, -, *, /)
+                    - + --> Effettua la somma di numeri o stringhe 
+                    - - --> Effettua la sottrazione tra 2 numeri
+                    - * --> Effettua la moltiplicazione tra 2 numeri
+                    - / --> Effettua la divisione tra 2 numeri. A meno di parsing, restituisce un float
+                - Logica --> Richiama le operazioni logiche (and, or, not())
+                    - and --> verifica se le 2 condizioni sono rispettate contemporaneamente
+                    - or --> verifica se almeno una delle 2 condizioni è rispettata
+                    - not() --> restituisce l'opposto della condizione dichiarata all'interno delle parentesi
+Domanda 14 --> Break (???)
+Domanda 15 --> Il controllo del flusso è la gestione delle istruzioni del codice in base a determinate condizioni. Le 3 famiglie che controllano il flusso sono:
+                - Condizioni (if, elif, else, match)
+                - Cicli (for, while, match)
+                - Funzioni (def)
+Domanda 16 --> List[]
